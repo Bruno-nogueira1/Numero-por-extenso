@@ -1,3 +1,5 @@
+main = True
+
 def numero_extenso(numero):
     numero = str(numero)
     tam = len(numero)   
@@ -77,5 +79,20 @@ def numero_extenso(numero):
                                                         ok = False
                                                         break
 
-numero_extenso(1)
-numero_extenso(999)
+
+while main:
+    numero =  int(input('Insira um número entre 0 e 999 para ser escrito por extenso:'))
+    while not 0 <= numero < 1000:
+        numero =  int(input('Insira um número entre 0 e 999 para ser escrito por extenso:'))
+    numero_extenso(numero)
+    continuar = int(input('''[1] Continuar
+[2] Sair
+'''))
+    while not 0 < continuar < 3:
+        continuar = int(input('''[1] Continuar
+[2] Sair
+'''))
+    if continuar == 1:
+        pass
+    else:
+        main = False
